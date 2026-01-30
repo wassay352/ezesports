@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments | EZ ESPORTS</title>
+    <link rel="stylesheet" href="   style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-ez">EZ</span>
+                <span class="brand-esports">ESPORTS</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="squad.html" class="nav-link">SQUAD</a>
+                <a href="tournaments.html" class="nav-link active">TOURNAMENTS</a>
+                <a href="admin.html" class="nav-link admin-link">ADMIN</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-bg"></div>
+        <div class="container">
+            <h1 class="page-title">TOURNAMENTS</h1>
+            <p class="page-subtitle">View our competitive matches and standings</p>
+        </div>
+    </section>
+
+    <!-- Tournaments Section -->
+    <section class="tournaments-section">
+        <div class="container">
+            <!-- Tournament List View -->
+            <div id="tournament-list-view">
+                <div class="section-header">
+                    <h2 class="section-title">ACTIVE TOURNAMENTS</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div id="tournaments-grid" class="tournaments-grid">
+                    <!-- Tournaments will be dynamically loaded here -->
+                    <div class="empty-state">
+                        <div class="empty-icon">🏆</div>
+                        <h3>No Tournaments Yet</h3>
+                        <p>Tournaments will appear here once created by admin</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard View (Hidden by default) -->
+
+            <div id="leaderboard-view" style="display: none;">
+                <div class="leaderboard-header">
+                    <button id="back-to-tournaments" class="btn-back">← Back to Tournaments</button>
+                    <div class="tournament-info">
+                        <h2 id="tournament-name" class="section-title">TOURNAMENT NAME</h2>
+                        <div class="tournament-meta">
+                            <span id="tournament-date"></span>
+                            <span class="separator">|</span>
+                            <span id="tournament-matches"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leaderboard-container">
+                    <div class="leaderboard-table-wrapper">
+                        <table class="leaderboard-table">
+                            
+                            <thead>
+                                <tr>
+                                    <th class="rank-col">RANK</th>
+                                    <th class="team-col">TEAM</th>
+                                    <th class="matches-col">MATCHES</th>
+                                    <th class="kills-col">KILLS</th>
+                                    <th class="placement-col">PLACEMENT PTS</th>
+                                    <th class="total-col">TOTAL PTS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboard-body">
+                                <!-- Leaderboard rows will be dynamically loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Points System Explanation -->
+                <div class="points-system">
+                    <h3>PUBG POINT SYSTEM</h3>
+                    <p><strong>Total Points</strong> = Placement Points + Kill Points</p>
+                    <p>Teams are ranked by <strong>Total Points</strong>. In case of a tie, the team with more <strong>Kills</strong> ranks higher.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="brand-ez">EZ</span>
+                        <span class="brand-esports">ESPORTS</span>
+                    </div>
+                    <p>Professional PUBG Esports Team</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>NAVIGATE</h4>
+                        <a href="index.html">Home</a>
+                        <a href="squad.html">Squad</a>
+                        <a href="tournaments.html">Tournaments</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>CONNECT</h4>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EZ ESPORTS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="leaderboard.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
